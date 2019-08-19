@@ -1,1 +1,1 @@
-# Click [here](https://github.lbess.io) to see my portfolio
+# Click [here](https://lbess.github.io) to see my portfolio
