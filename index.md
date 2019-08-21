@@ -1,19 +1,34 @@
-## Portfolio
+# Portfolio
 
 ---
 
-### Projects
+## Projects
 
-[Flocking Algorithm in Unity](https://github.com/LBess)
+### [Flocking Algorithm in Unity](https://github.com/LBess)
+<br>
+#### Skills Used
+* C# Scripting 
+* Vector manipulation
+* Unity Game Engine basics
 <br>
 <img src="images/2flocks_obstacles_gif.gif?raw=true"/>
 
 ---
-[Classic Snake game in Python](https://github.com/LBess)
+### [Classic Snake game in Python](https://github.com/LBess)
 <br>
-<img src="images/snake.gif?raw=true"/>
+#### Skills Used
+* Computer graphics basics
+* Object Oriented Programming (OOP) in Python
+* Pygame library basics
+<br>
+<img src="images/snake_standard.png?raw=true"/>
 
 ---
-[Maze game with AI in C++](https://github.com/LBess/cave-runner)
+### [Maze game in C++](https://github.com/LBess/cave-runner)
 <br>
-<img src="images/maze_demo_gif.gif?raw=true"/>
+#### Skills Used
+* Adjacency matrix implentation of a graph
+* Breadth First Search (BFS) implementation for AI
+* Ncurses library basics
+<br>
+<img src="images/maze_demo.png?raw=true"/>
