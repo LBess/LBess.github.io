@@ -10,6 +10,8 @@
 
 ---
 [Classic Snake game in Python](https://github.com/LBess)
+<br>
+<img src="images/snake.gif?raw=true"/>
 
 ---
 [Maze game with AI in C++](https://github.com/LBess/cave-runner)
