@@ -15,7 +15,7 @@
 <img src="images/2flocks_obstacles_gif.gif?raw=true"/>
 
 ---
-### [Classic Snake game in Python](https://github.com/LBess)
+### [Classic Snake game in Python](https://github.com/LBess/snake)
 
 #### Skills Used
 * Computer graphics basics
@@ -35,3 +35,6 @@
 <br>
 
 <img src="images/maze_demo.png?raw=true"/>
+
+---
+#### Questions, comments, or just want to say hello? I can be reached at lbessell@tamu.edu
