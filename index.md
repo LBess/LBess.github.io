@@ -4,21 +4,21 @@
 
 ## Projects
 
-### [Flocking Algorithm in Unity](https://github.com/LBess)
+### [Flocking Algorithm in Unity](https://github.com/LBess/flocking-algorithm)
 
 #### Skills Used
-* C# Scripting 
-* Vector manipulation
-* Unity Game Engine basics
+* Understanding of the elegant mathematical behaviors to simulate movement.
+* Inheritance in C#
+* Unity Game Engine basics (Particularly physics and prefabs)
 <br>
 
-<img src="images/2flocks_obstacles_gif.gif?raw=true"/>
+<img src="images/2flocks_obstacles.gif?raw=true"/>
 
 ---
 ### [Classic Snake game in Python](https://github.com/LBess/snake)
 
 #### Skills Used
-* Computer graphics basics
+* Knowledge of how screens draw/update images
 * Object Oriented Programming (OOP) in Python
 * Pygame library basics
 <br>
