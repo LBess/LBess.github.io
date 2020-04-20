@@ -4,6 +4,17 @@
 
 ## Projects
 
+### Ray Tracer
+
+#### Skills Used
+* Linear Algebra
+* Developing a large C++ program with minimal help outside of the standard library
+* Good debugging practices in Visual Studio
+<br>
+
+<img src="images/rt-scene3.jpg">
+<img src="images/rt-scene0.jpg">
+
 ### [Flocking Algorithm in Unity](https://github.com/LBess/flocking-algorithm)
 
 #### Skills Used
