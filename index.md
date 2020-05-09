@@ -11,7 +11,7 @@
 * Render to texture
 * Bloom Post-Processing
 <br>
-<img src="images/A6-Demo-1.mp4">
+<img src="https://i.gyazo.com/561e28e43171f76baab7f15c5f3ca3cb.gif" alt="Deferred Rendering Project" width="904"/></a>
 
 ---
 ### Ray Tracer
