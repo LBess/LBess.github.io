@@ -14,6 +14,7 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="scripts/main.js"></script>
 
 	<!--CSS-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -36,7 +37,7 @@
 			<ul class="navbar-nav">
 				<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 				<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-				<li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+				<li class="nav-item"><a class="nav-link" href="data/resume.pdf" target="_blank">Resume</a></li>
 				<li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
 				<li class="nav-item"><a class="nav-link" href="service.html">Service</a></li>
 				<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -51,86 +52,125 @@
 
 	<div class="description">
 		<h1>Portfolio</h1>
-		<br>
+		<br><br>
 
 		<!-- Tiled-Deferred Rendering and Bloom -->
-		<h2>Tiled-Deferred Rendering and Bloom</h2>
-		<br>
-		<p>
-
-		</p>
-		<img src="" class="demo-square" alt="Tiled-Deferred Rendering and Bloom"/>
-		<img src="" class="demo-square" alt="Frustum Culling"/>
+		<button onclick="showDiv(0)"><h2>Dynamic Geometry and Tiled-Deferred Rendering</h2></button>
+		<br><br>
+		<div id="project_0" class="projectDiv">
+			<video width="800" height="600" controls>
+				<source src="images/deferred_rendering_1.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+			<br>
+			<p>
+				The final project in my computer graphics <a href="http://courses.cs.tamu.edu/sueda/CSCE441/2020S/" target="_blank">class</a> was to implement dynamic geometry, deferred rendering, and bloom in OpenGL.
+				I went on to extend this project with tiled-deferred rendering as well.
+				<br><br>
+				
+				<h3>Dynamic Geometry</h3>
+				There are various geometrical objects with transformations in this project, including: bouncing spheres, surfaces of revolution that deform, rotating bunnies, and shearing teapots.
+				<br><br>
+				
+				<h3>Deferred Rendering</h3>
+				Instead of having one rendering pass whereby the scene is rendered directly to the screen, in deferred rendering we have two passes. 
+				In the first pass we render the normal, diffuse, position, and emissive lighting attributes to their own textures.
+				For the secon pass we draw a fullscreen quad and apply these textures with the lighting component onto the quad.
+				<br><br>
+				
+				<h3>Bloom</h3>
+				Bloom is a post-processing method that gives light sources a glow effect.
+				I used a Gaussian-Filter implementation for my bloom.
+				The bloom effect is it's own texture which is computed after the first render pass but before the second.
+				<br><br>
+				
+				<h3>Tiled-Deferred Rendering</h3>
+				Tiled-deferred rendering becomes necessary when there are a lot of lights in a scene. It increases performance by only applying light sources to a fragment if they effect it.
+				The first step in this process is dividing the view frustum into several different frustums, where each frustum corresponds to a different tile in the near plane.
+				In the second pass we loop through each of these view frustums and perform a view-frustum intersection test on each light. 
+				If the light's area of effect (governed by its attenuation) is inside or intersecting the frustum, we include that light in that tile's fragment computation.
+			</p>
+		</div>
 		<br><br>
 
 		<!-- Ray Tracer -->
-		<h2>Ray Tracer</h2>
-		<br>
-		<p>
-			One of the projects in my computer graphics <a href="http://courses.cs.tamu.edu/sueda/CSCE441/2020S/">class</a> was to create an offline <a href="https://en.wikipedia.org/wiki/Ray_tracing_(graphics)">ray tracer</a> from scratch in C++.
-			<br><br>
-			This was a difficult yet immensely rewarding project. It was difficult in that I started from scratch and had to learn how light behaves in the real world in order to simulate it accurately.
-			One skillset among many you quickly sharpen in computer graphics is math, specifically with regards to linear algebra and vectors. After finally cracking the code of putting
-			math and physics into code to simulate light the results were very satisfying.
-			<br><br>
-			A problem I ran into a lot with the project was having to overhaul big sections of code whenever I needed to add a new feature (shadow rays, triangle intersections, reflection, etc).
-			From this I learned that I need to spend more time planning out the program, so that I don't need to refactor large blocks of code repeatedly.
-			<br><br>
-			Some future improvements I have in mind for this ray tracer are implementing ray-triangle acceleration techniques like a KD-tree, and implementing refraction.
-		</p>
-		<img src="images/rt-scene3.jpg" class="demo-square" alt="Ray Traced Sphere Reflection"/>
-		<img src="images/rt-scene0.png" class="demo-square" alt="Ray Traced Bunny and Teapot"/>
+		<button onclick="showDiv(1)"><h2>Ray Tracer</h2></button>
+		<br><br>
+		<div id="project_1" class="projectDiv">
+			<img src="images/rt-scene3.jpg" class="demo-square" alt="Ray Traced Sphere Reflection"/>
+			<img src="images/rt-scene0.png" class="demo-square" alt="Ray Traced Bunny and Teapot"/>
+			<br>
+			<p>
+				One of the projects in my computer graphics <a href="http://courses.cs.tamu.edu/sueda/CSCE441/2020S/" target="_blank">class</a> was to create an offline <a href="https://en.wikipedia.org/wiki/Ray_tracing_(graphics)" target="_blank">ray tracer</a> from scratch in C++.
+				<br><br>
+				
+				<h3>Technical Details</h3>
+				This was a difficult yet immensely rewarding project. It was difficult in that I started from scratch and had to learn how light behaves in the real world in order to simulate it accurately.
+				One skillset among many you quickly sharpen in computer graphics is math, specifically with regards to linear algebra and vectors. After finally cracking the code of putting
+				math and physics into code to simulate light the results were very satisfying.
+				<br><br>
+				
+				<h3>Problems</h3>
+				A problem I ran into a lot with the project was having to overhaul big sections of code whenever I needed to add a new feature (shadow rays, triangle intersections, reflection, etc).
+				From this I learned that I need to spend more time planning out the program, so that I don't need to refactor large blocks of code repeatedly.
+				<br><br>
+				
+				<h3>Future Improvements</h3>
+				Some future improvements I have in mind for this ray tracer are implementing ray-triangle acceleration techniques like a KD-tree, and implementing refraction.
+			</p>
+		</div>
 		<br><br>
 
 		<!-- Flocking Algorithm -->
-		<h2><a href="https://github.com/LBess/flocking-algorithm">Flocking Algorithm in Unity</a></h2>
-		<br>
-		<p>
-			In this project I implemented <a href="https://www.red3d.com/cwr/boids/">Craig Reynolds'</a> work on simulating animal flocking behavior. The different colored triangles in the demo represent two different "species"
-			of agents, and the white dots in the middle represent obstacles. The agents only flock with members of the same species, and they avoid the obstacles.
-			<br><br>
+		<button onclick="showDiv(2)"><h2>Flocking Algorithm in Unity</h2></button>
+		<br><br>
+		<div id="project_2" class="projectDiv">
+			<img src="images/2flocks_obstacles.gif?raw=true" class="img-fluid demo-square" alt="Flocking Algorithm"/>
+			<br>
+			<p>
+				In this project I implemented <a href="https://www.red3d.com/cwr/boids/" target="_blank">Craig Reynolds'</a> work on simulating animal flocking behavior. The different colored triangles in the demo represent two different "species"
+				of agents, and the white dots in the middle represent obstacles. The agents only flock with members of the same species, and they avoid the obstacles.
+				<br><br>
 
-			The flocking behavior is achieved with three simple behaviors calculated by each agent.
-			<br>
-			<strong>1. Alignment:</strong> Agents are compelled to orient themselves in a similar direction as their neighbors.
-			<br>
-			<strong>2. Avoidance:</strong> Agents are compelled to move away from nearby agents if they are within a certain threshold.
-			<br>
-			<strong>3. Cohesion:</strong> Agents are compelled to move towards the midpoint of all nearby agents within a certain threshold.
-			<br>
-			These behaviors can be weighted differently for different species, thus achieving flocks that move and look differently.
-			<br><br>
+				<h3>Technical Details</h3>
+				The flocking behavior is achieved with three simple behaviors calculated by each agent.
+				<br>
+				<strong>1. Alignment:</strong> Agents are compelled to orient themselves in a similar direction as their neighbors.
+				<br>
+				<strong>2. Avoidance:</strong> Agents are compelled to move away from nearby agents if they are within a certain threshold.
+				<br>
+				<strong>3. Cohesion:</strong> Agents are compelled to move towards the midpoint of all nearby agents within a certain threshold.
+				<br>
+				These behaviors can be weighted differently for different species, thus achieving flocks that move and look differently.
+				<br><br>
 
-			In the future I would like to add custom behaviors for predator agents which chase down and eat the normal agents. To complement this, I would also create a new behavior for
-			the normal agents to flee from predator agents.
-		</p>
-		<img src="images/2flocks_obstacles.gif?raw=true" class="img-fluid demo-square" alt="Flocking Algorithm"/>
+				<h3>Future Improvements</h3>
+				In the future I would like to add custom behaviors for predator agents which chase down and eat the normal agents. To complement this, I would also create a new behavior for
+				the normal agents to flee from predator agents.
+			</p>
+		</div>
 		<br><br>
 
 		<!-- Maze Game -->
-		<h2><a href="https://github.com/LBess/snake">Classic Snake game in Python</a></h2>
-		<br>
-		<p>
-			For this project I utilized the <a href="https://www.pygame.org/news">Pygame library</a> to create Snake in Python. Unlike a mainstream game engine like Unity, Pygame puts low level operations such as updating
-			the screen in the hands of the programmer. Instead of learning a lot of the API calls and overall layout as in Unity, I was instead learning more general methodologies
-			used in computer graphics such as how the screen is "drawn" on to achieve movement.
-			<br><br>
-			To improve on the current game I would like to add a main menu and leaderboard.
-		</p>
-		<img src="images/snake.gif?raw=true" class="img-fluid demo-square" alt="Snake Game"/>
+		<button onclick="showDiv(3)"><h2>Classic Snake game in Python</h2></button>
 		<br><br>
+		<div id="project_3" class="projectDiv">
+			<img src="images/snake.gif?raw=true" class="img-fluid demo-square" alt="Snake Game"/>
+			<br>
+			<p>
+				For this project I utilized the <a href="https://www.pygame.org/news" target="_blank">Pygame library</a> to create Snake in Python. 
+				<br><br>
+				
+				<h3>Technical Details</h3>
+				Unlike a mainstream game engine like Unity, Pygame puts low level operations such as updating
+				the screen in the hands of the programmer. Instead of learning a lot of the API calls and overall layout as in Unity, I was instead learning more general methodologies
+				used in computer graphics such as how the screen is "drawn" on to achieve movement.
+				<br><br>
 
-		<!-- Cave Runner -->
-		<h2><a href="https://github.com/LBess/cave-runner">Maze game in C++</a></h2>
-		<br>
-		<p>
-			The purpose of this project was to both learn <a href="https://www.linuxjournal.com/content/creating-adventure-game-terminal-ncurses">ncurses</a>, a terminal graphics library, and implement a rudimentary game AI. Ncurses has been around in some form or fashion
-			since the early 1990s, yet there wasn't much documentation on it besides the main author's website. This necessitated me having to tinker a lot to find out how specific things were done.
-			The AI is simply a goblin that chases the player via a Breadth-first search (BFS) algorithm. One simple yet interesting thing I learned from this project was how to <a href="https://softwareengineering.stackexchange.com/questions/212808/treating-a-1d-data-structure-as-2d-grid">map a 2D array to a 1D array</a>.
-			<br><br>
-			To make the game more interesting I would like to both add more maps and some way for the player to slow down the AI.
-		</p>
-		<img src="images/maze_demo.gif?raw=true" class="img-fluid demo-square" alt="Cave Runner"/>
+				<h3>Future Improvements</h3>
+				To improve on the current game I would like to add a main menu and leaderboard.
+			</p>
+		</div>
 		<br><br>
 	</div>
 </body>

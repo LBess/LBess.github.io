@@ -22,16 +22,25 @@ body {
 
 h1 {
     color: #000000;
+    font-size: 44pt;
 }
 
 h2 {
     color: #000000;
+    font-size: 20pt;
+}
+
+h3 {
+    color: #000000;
+    font-size: 18pt;
 }
 
 p {
     color: #000000;
-    font-size: 1.3rem;
-    line-height: 1.5;
+    font-size: 14pt;
+
+    /*font-size: 1.3rem;
+    line-height: 1.5;*/
 }
 
 ul {
@@ -78,6 +87,11 @@ img {
     height: auto;
 }
 
+video {
+    width: 100%;
+    height: auto;
+}
+
 .portrait {
     width: auto;
     max-height: 400px;
@@ -96,6 +110,21 @@ img {
 .demo-square {
     max-height: 400px;
     max-width: 400px;
+}
+
+.projectDiv {
+    display: none;
+}
+
+button {
+    border: solid;
+    border-color: #7f7fff;
+    color: white;
+    /*padding: 15px 32px;*/
+    padding: 12px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .github {
