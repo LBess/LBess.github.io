@@ -39,7 +39,7 @@
 				<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
 				<li class="nav-item"><a class="nav-link" href="data/resume.pdf" target="_blank">Resume</a></li>
 				<li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-				<li class="nav-item"><a class="nav-link" href="service.html">Service</a></li>
+				<li class="nav-item"><a class="nav-link" href="tutorials.html">Tutorials</a></li>
 				<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 			</ul>
 		</div>
@@ -55,9 +55,9 @@
 		<br><br>
 
 		<!-- Tiled-Deferred Rendering and Bloom -->
-		<button onclick="showDiv(0)"><h2>Dynamic Geometry and Tiled-Deferred Rendering</h2></button>
+		<button onclick="showDiv(0)" class="project-button"><h2>Dynamic Geometry and Tiled-Deferred Rendering</h2></button>
 		<br><br>
-		<div id="project_0" class="projectDiv">
+		<div id="project_0" class="project-div">
 			<video width="800" height="600" controls>
 				<source src="images/deferred_rendering_1.mp4" type="video/mp4">
 				Your browser does not support the video tag.
@@ -89,14 +89,18 @@
 				The first step in this process is dividing the view frustum into several different frustums, where each frustum corresponds to a different tile in the near plane.
 				In the second pass we loop through each of these view frustums and perform a view-frustum intersection test on each light. 
 				If the light's area of effect (governed by its attenuation) is inside or intersecting the frustum, we include that light in that tile's fragment computation.
+
+				<h3>Future Improvements</h3>
+				While I've implemented all the features I wanted to, there are still (as always) some improvements that can be made to increase performance. 
+				Beyond this, I'd also like to create a tutorial or two on some of the advanced concepts like bloom and tiled-deferred renering from the project.
 			</p>
 		</div>
 		<br><br>
 
 		<!-- Ray Tracer -->
-		<button onclick="showDiv(1)"><h2>Ray Tracer</h2></button>
+		<button onclick="showDiv(1)" class="project-button"><h2>Ray Tracer</h2></button>
 		<br><br>
-		<div id="project_1" class="projectDiv">
+		<div id="project_1" class="project-div">
 			<img src="images/rt-scene3.jpg" class="demo-square" alt="Ray Traced Sphere Reflection"/>
 			<img src="images/rt-scene0.png" class="demo-square" alt="Ray Traced Bunny and Teapot"/>
 			<br>
@@ -122,9 +126,9 @@
 		<br><br>
 
 		<!-- Flocking Algorithm -->
-		<button onclick="showDiv(2)"><h2>Flocking Algorithm in Unity</h2></button>
+		<button onclick="showDiv(2)" class="project-button"><h2>Flocking Algorithm in Unity</h2></button>
 		<br><br>
-		<div id="project_2" class="projectDiv">
+		<div id="project_2" class="project-div">
 			<img src="images/2flocks_obstacles.gif?raw=true" class="img-fluid demo-square" alt="Flocking Algorithm"/>
 			<br>
 			<p>
@@ -152,9 +156,9 @@
 		<br><br>
 
 		<!-- Maze Game -->
-		<button onclick="showDiv(3)"><h2>Classic Snake game in Python</h2></button>
+		<button onclick="showDiv(3)" class="project-button"><h2>Snake Game in Pygame</h2></button>
 		<br><br>
-		<div id="project_3" class="projectDiv">
+		<div id="project_3" class="project-div">
 			<img src="images/snake.gif?raw=true" class="img-fluid demo-square" alt="Snake Game"/>
 			<br>
 			<p>

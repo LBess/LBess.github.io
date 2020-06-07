@@ -112,21 +112,28 @@ video {
     max-width: 400px;
 }
 
-.projectDiv {
+.project-div {
     display: none;
 }
 
-button {
+.project-button {
     border: solid;
     border-color: #7f7fff;
     color: white;
-    /*padding: 15px 32px;*/
     padding: 12px 26px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+
+    min-width: 700px;
+    width: auto;
 }
 
+button:hover {
+    background-color: darkgrey;
+}
+
+/* Social Media Buttons */
 .github {
     background: #000000;
     color: white;
