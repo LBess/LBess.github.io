@@ -54,10 +54,66 @@
 		<h1>Portfolio</h1>
 		<br><br>
 
-		<!-- Tiled-Deferred Rendering and Bloom -->
-		<button onclick="showDiv(0)" class="project-button"><h2>Dynamic Geometry and Tiled-Deferred Rendering</h2></button>
+		<!-- N-body simulator -->
+		<button onclick="showDiv(0)" class="project-button"><h2>N-body Simulator</h2></button>
 		<br><br>
 		<div id="project_0" class="project-div">
+			<iframe width="960" height="540" src="https://www.youtube.com/embed/rkPxkdBCvEA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		
+			<h3>N-Body Problem</h3>
+			<p>
+				How do we simulate the movement of n-bodies when each body affects every other body?<br>
+				Examples: Gravitational forces on stars, network visualization, molecular dynamics, and more.
+			</p><br>
+	
+			<h3>Naive Simulation</h3>
+			<p>
+				Before attempting the Barnes-Hut simulation I first implemented the much easier Naive n-body simulation. I quickly discovered that the Naive simulation couldn't 
+				effectively run simulations with more than ~2000 bodies in real time. This is actually what kindled my interest in pursuing Barnes-Hut; I wanted to see massive
+				galaxies move around in real time!
+	
+				<h4>The Algorithm</h4>
+				<ol>
+					For each simulation step<br>
+					<li>Loop through each body and calculate the force from every other body</li><br>
+					<li>Update the positions and velocities</li>
+				</ol>
+			</p><br>
+	
+			<h3>Barnes-Hut Simulation</h3>
+			<p>
+				This is an approximating simulation of the n-body problem.
+	
+				<h4>The Algorithm</h4>
+				<ol>
+					For each simulation step<br>
+					<li>Build the Octree</li><br>
+					<li>Compute each node’s center of mass</li><br>
+					<li>Approximate the force on each body by traversing the octree</li>
+				</ol>
+			</p><br>
+	
+			<h3>Octrees</h3>
+			<p>
+				This data structure is the magic behind the Barnes-Hut simulation.
+				It is essentially a normal tree with the caviat that every internal node has eight children.
+				The octree is used for 3D Barnes-Hut because it is both fairly easy to implement and efficient.
+				For 2D Barnes-Hut, a quadtree is used (each internal node has four children).
+	
+				<ol>
+					My implementation has a few additional characteristics<br>
+					<li>Each body is a leaf</li><br>
+					<li>Each leaf has a max of one body</li><br>
+					<li>Nodes are cubes, and have the same length as all others nodes on their level</li>
+				</ol>
+			</p><br>
+		</div>
+		<br><br>
+
+		<!-- Tiled-Deferred Rendering and Bloom -->
+		<button onclick="showDiv(1)" class="project-button"><h2>Dynamic Geometry and Tiled-Deferred Rendering</h2></button>
+		<br><br>
+		<div id="project_1" class="project-div">
 			<video width="800" height="600" controls>
 				<source src="images/deferred_rendering_1.mp4" type="video/mp4">
 				Your browser does not support the video tag.
@@ -98,9 +154,9 @@
 		<br><br>
 
 		<!-- Ray Tracer -->
-		<button onclick="showDiv(1)" class="project-button"><h2>Ray Tracer</h2></button>
+		<button onclick="showDiv(2)" class="project-button"><h2>Ray Tracer</h2></button>
 		<br><br>
-		<div id="project_1" class="project-div">
+		<div id="project_2" class="project-div">
 			<img src="images/rt-scene3.jpg" class="demo-square" alt="Ray Traced Sphere Reflection"/>
 			<img src="images/rt-scene0.png" class="demo-square" alt="Ray Traced Bunny and Teapot"/>
 			<br>
@@ -121,58 +177,6 @@
 				
 				<h3>Future Improvements</h3>
 				Some future improvements I have in mind for this ray tracer are implementing ray-triangle acceleration techniques like a KD-tree, and implementing refraction.
-			</p>
-		</div>
-		<br><br>
-
-		<!-- Flocking Algorithm -->
-		<button onclick="showDiv(2)" class="project-button"><h2>Flocking Algorithm in Unity</h2></button>
-		<br><br>
-		<div id="project_2" class="project-div">
-			<img src="images/2flocks_obstacles.gif?raw=true" class="img-fluid demo-square" alt="Flocking Algorithm"/>
-			<br>
-			<p>
-				In this project I implemented <a href="https://www.red3d.com/cwr/boids/" target="_blank">Craig Reynolds'</a> work on simulating animal flocking behavior. The different colored triangles in the demo represent two different "species"
-				of agents, and the white dots in the middle represent obstacles. The agents only flock with members of the same species, and they avoid the obstacles.
-				<br><br>
-
-				<h3>Technical Details</h3>
-				The flocking behavior is achieved with three simple behaviors calculated by each agent.
-				<br>
-				<strong>1. Alignment:</strong> Agents are compelled to orient themselves in a similar direction as their neighbors.
-				<br>
-				<strong>2. Avoidance:</strong> Agents are compelled to move away from nearby agents if they are within a certain threshold.
-				<br>
-				<strong>3. Cohesion:</strong> Agents are compelled to move towards the midpoint of all nearby agents within a certain threshold.
-				<br>
-				These behaviors can be weighted differently for different species, thus achieving flocks that move and look differently.
-				<br><br>
-
-				<h3>Future Improvements</h3>
-				In the future I would like to add custom behaviors for predator agents which chase down and eat the normal agents. To complement this, I would also create a new behavior for
-				the normal agents to flee from predator agents.
-			</p>
-		</div>
-		<br><br>
-
-		<!-- Maze Game -->
-		<button onclick="showDiv(3)" class="project-button"><h2>Snake Game in Pygame</h2></button>
-		<br><br>
-		<div id="project_3" class="project-div">
-			<img src="images/snake.gif?raw=true" class="img-fluid demo-square" alt="Snake Game"/>
-			<br>
-			<p>
-				For this project I utilized the <a href="https://www.pygame.org/news" target="_blank">Pygame library</a> to create Snake in Python. 
-				<br><br>
-				
-				<h3>Technical Details</h3>
-				Unlike a mainstream game engine like Unity, Pygame puts low level operations such as updating
-				the screen in the hands of the programmer. Instead of learning a lot of the API calls and overall layout as in Unity, I was instead learning more general methodologies
-				used in computer graphics such as how the screen is "drawn" on to achieve movement.
-				<br><br>
-
-				<h3>Future Improvements</h3>
-				To improve on the current game I would like to add a main menu and leaderboard.
 			</p>
 		</div>
 		<br><br>
