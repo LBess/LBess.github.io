@@ -8,6 +8,7 @@ enableEmoji=true
 enableRobotsTXT=true
 pygmentsUseClasses=true
 pygmentsCodeFences=true
+publishDir = "docs"
 
 [params.intro]
   main = "Liam Bessell"
