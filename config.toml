@@ -1,0 +1,90 @@
+baseURL = "https://lbess.github.io/"
+languageCode = "en-us"
+title = "Liam Bessell"
+theme = "personal-web"
+#copyright="© Liam Bessell"
+googleAnalytics = ""
+enableEmoji=true
+enableRobotsTXT=true
+pygmentsUseClasses=true
+pygmentsCodeFences=true
+
+[params.intro]
+  main = "Liam Bessell"
+  sub = "Journey Before Destination"
+
+[params.main]
+  latestPublishHeader = "N-Body Simulator"
+
+[taxonomies]
+  design = "designs"
+  tech = "techs"
+
+[blackfriday]
+  hrefTargetBlank = true
+
+[params]
+  breadcrumb = true
+  accentColor = "#0BFF01"
+  #mainSections = ["portfolio"] # values: ['post', 'portfolio'] only accept one section, to be displayed bellow 404
+
+[params.notFound]
+  gopher = "/images/gopher.png" # checkout https://gopherize.me/
+  h1 = "Oops!"
+  p = "It seems that this page doesn't exist."
+
+[params.sections]
+  # Define how your sections will be called
+  # when automatically pulled. For instance in the 404 page
+  post = "article"
+  portfolio = "project"
+
+[params.sidebar]
+  backgroundImage = "/images/ziggurat.jpg"
+  gradientOverlay = "" # default: rgba(0,0,0,0.4),rgba(0,0,0,0.4)
+  logo = "/images/profile.jpg"
+
+[params.assets]
+  favicon = ""
+  customCSS = ""
+
+[params.social]
+  github = "https://github.com/LBess"
+  linkedin = "https://www.linkedin.com/in/lbessell/"
+
+[params.contact]
+  email = "lbessell7@gmail.com"
+  text= "Contact Me"
+
+
+[menu]
+
+[[menu.main]]
+  identifier = "blog"
+  name = "Blog"
+  title = "Blog section"
+  url = "/blog/"
+  weight = -110
+
+[[menu.main]]
+  identifier = "portfolio"
+  name = "Portfolio"
+  title = "Portfolio"
+  url = "/portfolio/"
+  weight = -100
+
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    disable = true
+    respectDoNotTrack = true
+    useSessionStorage = false
+  [privacy.twitter]
+    disable = false
+    enableDNT = true
+    simple = false
