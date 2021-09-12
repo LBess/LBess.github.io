@@ -10,6 +10,8 @@ projectUrl: https://people.engr.tamu.edu/sueda/courses/CSCE489/2020F/projects/Li
 ---
 [Video presentation](https://www.youtube.com/watch?v=rkPxkdBCvEA)
 
+[Github repository](https://github.com/LBess/barnes-hut)
+
 ### N-Body Problem
 How do we simulate the movement of n-bodies when each body affects every other body?
 Examples: Gravitational forces on stars, network visualization, molecular dynamics, and more.

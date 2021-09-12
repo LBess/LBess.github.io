@@ -61,17 +61,17 @@ publishDir = "docs"
 [menu]
 
 [[menu.main]]
-  identifier = "blog"
-  name = "Blog"
-  title = "Blog section"
-  url = "/blog/"
-  weight = -110
-
-[[menu.main]]
   identifier = "portfolio"
   name = "Portfolio"
   title = "Portfolio"
   url = "/portfolio/"
+  weight = -110
+
+[[menu.main]]
+  identifier = "blog"
+  name = "Blog"
+  title = "Blog section"
+  url = "/blog/"
   weight = -100
 
 [sitemap]

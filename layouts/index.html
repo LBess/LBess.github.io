@@ -3,4 +3,19 @@
 <h1>{{ .Title | markdownify }}</h1>
 {{ .Content }}
 
+<h2>{{ .Site.Params.main.latestPublishHeader | default "Highlighted Project" }}</h2>
+  {{ $pages := where site.RegularPages "Type" "in" .Site.Params.mainSections }}
+  {{ $break := false }}
+  {{ range $elem_val := $pages }}
+    {{ if $break }}
+    {{ else }}
+      {{ if in .Site.Params.mainSections "portfolio" }}
+        {{ if eq $elem_val.Title "N-Body Simulation"}}
+          {{ partial "portfolio/item" $elem_val}}
+          {{ $break = false }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
 {{ partial "footer" .}}

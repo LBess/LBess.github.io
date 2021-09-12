@@ -18,6 +18,7 @@
       
       <guid>https://lbess.github.io/portfolio/nbody-simulation/</guid>
       <description>Video presentation
+Github repository
 N-Body Problem How do we simulate the movement of n-bodies when each body affects every other body? Examples: Gravitational forces on stars, network visualization, molecular dynamics, and more.
 Naive Simulation Before attempting the Barnes-Hut simulation I first implemented the much easier Naive n-body simulation. I quickly discovered that the Naive simulation couldn&amp;rsquo;t effectively run simulations with more than ~2000 bodies in real time. This is actually what kindled my interest in pursuing Barnes-Hut; I wanted to see massive galaxies move around in real time!</description>
     </item>
