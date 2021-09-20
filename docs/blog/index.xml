@@ -6,9 +6,20 @@
     <description>Recent content in Blog on Liam Bessell</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>© Liam Bessell</copyright>
+    <lastBuildDate>Sun, 08 Aug 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://lbess.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Colorado August 2021</title>
+      <link>https://lbess.github.io/blog/colorado-august-2021/</link>
+      <pubDate>Sun, 08 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://lbess.github.io/blog/colorado-august-2021/</guid>
+      <description>Leadville Mt. Elbert Lake Willow Great Sand Dunes NP </description>
+    </item>
     
   </channel>
 </rss>

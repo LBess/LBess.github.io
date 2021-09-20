@@ -3,6 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://lbess.github.io/blog/</loc>
+    <lastmod>2021-08-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://lbess.github.io/blog/colorado-august-2021/</loc>
+    <lastmod>2021-08-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://lbess.github.io/</loc>
+    <lastmod>2021-08-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://lbess.github.io/portfolio/daylighting-vr/</loc>
     <lastmod>2021-05-01T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -11,13 +32,6 @@
   
   <url>
     <loc>https://lbess.github.io/techs/godot/</loc>
-    <lastmod>2021-05-01T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://lbess.github.io/</loc>
     <lastmod>2021-05-01T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -103,12 +117,6 @@
   <url>
     <loc>https://lbess.github.io/portfolio/raytracer/</loc>
     <lastmod>2020-04-02T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://lbess.github.io/blog/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
