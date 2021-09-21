@@ -25,6 +25,17 @@ Naive Simulation Before attempting the Barnes-Hut simulation I first implemented
     </item>
     
     <item>
+      <title>Deferred Renderer</title>
+      <link>https://lbess.github.io/portfolio/deferred-renderer/</link>
+      <pubDate>Tue, 21 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://lbess.github.io/portfolio/deferred-renderer/</guid>
+      <description>The final project in my computer graphics was to implement dynamic geometry, deferred rendering, and bloom in OpenGL. I went on to extend this project with tiled-deferred rendering as well.
+Dynamic Geometry There are various geometrical objects with transformations in this project, including: bouncing spheres, surfaces of revolution that deform, rotating bunnies, and shearing teapots.
+Deferred Rendering Instead of having one rendering pass whereby the scene is rendered directly to the screen, in deferred rendering we have two passes.</description>
+    </item>
+    
+    <item>
       <title>Raytracer</title>
       <link>https://lbess.github.io/portfolio/raytracer/</link>
       <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
