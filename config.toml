@@ -2,12 +2,12 @@ baseURL = "https://lbess.github.io/"
 languageCode = "en-us"
 title = "Liam Bessell"
 theme = "personal-web"
-copyright="© Liam Bessell"
+copyright = "© Liam Bessell"
 googleAnalytics = "G-ZL593Z5GC7"
-enableEmoji=true
-enableRobotsTXT=true
-pygmentsUseClasses=true
-pygmentsCodeFences=true
+enableEmoji = true
+enableRobotsTXT = true
+pygmentsUseClasses = true
+pygmentsCodeFences = true
 publishDir = "docs"
 
 [params.intro]
