@@ -1,0 +1,14 @@
+name: Goodreads Scrape Scheduler
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install BeautifulSoup
+        run: pip install BeautifulSoup
+      - name: Run scraper
+        run: python goodreads-scraper.py
+      - uses: stefanzweifel/git-auto-commit-action@v4

@@ -10,6 +10,7 @@ pygmentsUseClasses = true
 pygmentsCodeFences = true
 publishDir = "docs"
 
+
 [params.intro]
   main = "Liam Bessell"
   sub = "Journey Before Destination"
@@ -47,7 +48,7 @@ publishDir = "docs"
 
 [params.assets]
   favicon = ""
-  customCSS = ""
+  customCss = ["/css/list_print.css", "/css/list.css"]
 
 [params.social]
   github = "https://github.com/LBess"
@@ -89,3 +90,10 @@ publishDir = "docs"
     disable = false
     enableDNT = true
     simple = false
+
+[server]
+  [[server.headers]]
+    for = "/**"
+    [server.headers.values]
+      Access-Control-Allow-Credentials = true
+      Access-Control-Allow-Origin = "https://lbess.github.io/ http://localhost:1313/"
