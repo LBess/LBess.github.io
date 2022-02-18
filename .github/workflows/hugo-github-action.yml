@@ -25,7 +25,7 @@ jobs:
           personal_token: ${{ secrets.TOKEN }}
           external_repository: lbess/lbess.github.io
           publish_dir: ./docs
-          #   keep_files: true
+          keep_files: true
           user_name: lbess
           user_email: lbessell7@gmail.com
           publish_branch: master
