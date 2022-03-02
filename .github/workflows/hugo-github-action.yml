@@ -1,4 +1,4 @@
-name: CI
+name: Build Hugo Project
 on: push
 jobs:
   deploy:

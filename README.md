@@ -5,4 +5,4 @@ Made with the [Personal Web](https://github.com/bjacquemet/personal-web) theme f
 ### Building and Deploying
 
 * The website can be built and run locally via `hugo server`
-* Before pushing changes, run `hugo -D` to build and save the changes in `docs/`, otherwise the Github-page won't be updated.
+* If not using Github actions to build, run `hugo -D` to build and save the changes in `docs/`, otherwise the Github-page won't be updated.
