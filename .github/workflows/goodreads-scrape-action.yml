@@ -13,4 +13,11 @@ jobs:
         run: pip install BeautifulSoup
       - name: Run scraper
         run: python goodreads-scraper.py
-      - uses: stefanzweifel/git-auto-commit-action@v4     # Todo: Change this
+      - name: Commit and Push
+        uses: devops-infra/action-commit-push@master
+        with:
+          github_token: "${{ secrets.GITHUB_TOKEN }}"
+          add_timestamp: true
+          commit_prefix: "[AUTO]"
+          commit_message: "Automatic commit"
+          force: false
