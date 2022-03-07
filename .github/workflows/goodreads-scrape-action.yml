@@ -1,12 +1,12 @@
 name: Goodreads Scrape Scheduler
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 0 * * *"
   # Allows you to run this workflow manually from the Actions tab
   branches:
     - 'master'
   workflow_dispatch:
-  
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
