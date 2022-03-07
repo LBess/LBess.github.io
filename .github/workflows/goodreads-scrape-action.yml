@@ -1,20 +1,24 @@
 name: Goodreads Scrape Scheduler
 on:
   schedule:
-    - cron: "0 0 * * *"
-    # Allows you to run this workflow manually from the Actions tab
-    branches:
-      - 'master'
-  #workflow_dispatch:
+    - cron: '0 0 * * *'
+    #branches:
+      #- 'master'
+  workflow_dispatch:
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
     steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+
       - name: Install BeautifulSoup
         run: pip install BeautifulSoup
+
       - name: Run scraper
         run: python goodreads-scraper.py
+
       - name: Commit and Push
         uses: devops-infra/action-commit-push@master
         with:
