@@ -19,10 +19,12 @@ jobs:
       - name: Run scraper
         run: python goodreads-scraper.py
 
-      - name: Commit and Push
+      - name: Commit and push
         uses: devops-infra/action-commit-push@master
         with:
           github_token: "${{ secrets.GITHUB_TOKEN }}"
           commit_prefix: "[AUTO]"
           commit_message: "Automatic commit"
           force: false
+      
+      #- name: Build and deploy hugo
