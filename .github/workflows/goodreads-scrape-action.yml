@@ -1,9 +1,7 @@
 name: Goodreads Scrape Scheduler
 on:
   schedule:
-    - cron: '0 0 * * *'
-    #branches:
-      #- 'master'
+    - cron: '0 0,12 * * *'
   workflow_dispatch:
 
 jobs:
@@ -26,5 +24,3 @@ jobs:
           commit_prefix: "[AUTO]"
           commit_message: "Automatic commit"
           force: false
-      
-      #- name: Build and deploy hugo
